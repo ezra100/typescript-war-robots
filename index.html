@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>War Robots Tasks Calculater</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="./pablo.css">
+    <meta property="og:image" content="./background.jpg">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+
+
+    <!-- The drawer is always open in large screens. The header is always shown,
+          even in small screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header demo-layout-transparent">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+              <!-- Title -->
+              <span class="mdl-layout-title">War Robots Tasks Calculater</span>
+              <!-- Add spacer, to align navigation to the right -->
+              <div class="mdl-layout-spacer"></div>
+              <!-- Navigation -->
+
+            </div>
+          </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title"><h6>Battle Info </h6></span>
+            <nav class="mdl-navigation margin-10">
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                    <div class="mdl-tabs__tab-bar">
+                        <a href="#basic-panel" class="mdl-tabs__tab is-active">Basic</a>
+                        <a href="#advanced-panel" class="mdl-tabs__tab">Advanced</a>
+                    </div>
+
+                    <div class="mdl-tabs__panel is-active" id="basic-panel">
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" value="8" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="battle-length">
+                                <label class="mdl-textfield__label" for="sample4">Average battle length (minutes)</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" value="55%" type="text" pattern="-?[0-9]*%?" id="winning-percentage">
+                                <label class="mdl-textfield__label" for="sample4">Percentage of battles you win</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" value="4.3" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="battle-kills">
+                                <label class="mdl-textfield__label" for="sample4">Average kills per battle</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" value="5" pattern="-?[0-9]*(\.[0-9]+)?" id="beacon-caps">
+                                <label class="mdl-textfield__label" for="sample4">Average beacon caps</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mdl-tabs__panel" id="advanced-panel">
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" value="" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="advanced-beacon">
+                                <label class="mdl-textfield__label" for="advanced-beacon">Beacon capture - avg time to achieve 1</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" value="" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="advanced-win">
+                                <label class="mdl-textfield__label" for="advanced-win">Wins - avg time to achieve 1</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" value="" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="advanced-kills">
+                                <label class="mdl-textfield__label" for="advanced-kills">Enemy bots - avg time to kill 1</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Raised button with ripple -->
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="calculate">
+                        Calculate
+                    </button>
+
+                </div>
+
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="my-footer">
+                <p>Created by Ezra Steinmetz - <a href="mailto:ezra250@gmail.com"> ezra250@gmail.com</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
